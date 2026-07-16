@@ -69,7 +69,7 @@ class AcmeHomePage extends StatelessWidget {
                 children: [
                   Icon(Icons.phone),
                   SizedBox(width: 10),
-                  CustomText(text: "Employee Directory"),
+                  CustomText(text: " Employee Directory"),
                 ],
               ),
               SizedBox(height: 15),
