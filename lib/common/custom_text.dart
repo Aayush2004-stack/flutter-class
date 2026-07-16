@@ -20,7 +20,7 @@ class CustomText extends StatelessWidget {
       text,
       style: TextStyle(
         fontSize: fontSize,
-        color: Colors.black,
+        color: color,
         fontWeight: fontWeight,
       ),
     );
