@@ -1,0 +1,76 @@
+
+import 'package:flutter/material.dart';
+import 'package:my_app/common/custom_text.dart';
+
+class ItemPage extends StatelessWidget {
+  const ItemPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final List<Map<String, String>> orders = [
+      {
+        "orderno": "1234",
+        "date": "....",
+        "weight": "...",
+        "price": "43",
+        "status": "approved",
+      },
+      {
+        "orderno": "2345",
+        "date": "....",
+        "weight": "...",
+        "price": "65",
+        "status": "pending",
+      },
+      {
+        "orderno": "6565",
+        "date": "....",
+        "weight": "...",
+        "price": "545",
+        "status": "approved",
+      },
+      {
+        "orderno": "54534",
+        "date": "....",
+        "weight": "...",
+        "price": "34",
+        "status": "pending",
+      },
+    ];
+    return Scaffold(
+      appBar: AppBar(
+        title: CustomText(text: "Item Page", color: Colors.black, fontSize: 24),
+      ),
+
+      body: ListView.separated(
+        separatorBuilder: (context, index) => Divider(),
+        itemCount: orders.length,
+        itemBuilder: (context, index) {
+          final order = orders[index];
+          //0
+          return ListTile(
+            title: CustomText(text: " ${order["orderno"]}"),
+            subtitle: CustomText(text: "${order["price"]}"),
+            leading: CustomText(text: "${index + 1}."),
+            trailing: CustomText(text: "${order['status']}"),
+          );
+        },
+      ),
+      // body: GridView.builder(
+      //   padding: EdgeInsets.all(12),
+      //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      //     crossAxisCount: 3,
+      //     crossAxisSpacing: 32,
+      //     mainAxisSpacing: 32,
+      //   ),
+      //   itemCount: cities.length,
+      //   itemBuilder: (context, index) {
+      //     return Container(
+      //       color: Colors.red,
+      //       child: CustomText(text: cities[index], color: Colors.white),
+      //     );
+      //   },
+      // ),
+    );
+  }
+}
