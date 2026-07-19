@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/brand_page.dart';
 import 'package:flutter_application_1/contact_list_page.dart';
 import 'package:flutter_application_1/item_page.dart';
 //import 'package:flutter_application_1/contact_page.dart';
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "Items", home: ItemPage());
+    return MaterialApp(title: "Items", home: BrandPage());
+    //return MaterialApp(title: "Items", home: ItemPage());
     //return MaterialApp(title: "Contact List", home: const ContactListPage());
     //return MaterialApp(title: 'Profile page', home: const ContactPage());
 
